@@ -1,3 +1,4 @@
+/*ska bort sen början*/
 *{
     margin: 0;
     box-sizing: border-box;
@@ -66,48 +67,31 @@ header{
     height: 10%;
 }
 
+/*ska bort sen slut*/
+
 /*Mobil*/
 @media screen and (max-width: 768px) {
-    #hem_sida{
+    #after_sida{
         width: 100vw;
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas: 
-        'he'
         'a1'
         'a2'
-        'se'
-        'a3'
         'fo'
         ;
     }
 
-    #article1_hem{
+    #article1_after{
         grid-area: a1;
         background-color: aquamarine;
         min-height: 45vh;
     }
 
-    #article2_hem{
+    #article2_after{
         grid-area: a2;
         background-color: lightcoral;
-        min-height: 90vh;
-    }
-
-    #section_hem{
-        grid-area: se;
-        background-color: lightgreen;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 144vh;
-    }
-
-    #article3_hem{
-        grid-area: a3;
-        background-color: lightseagreen;
-        min-height: 90vh;
+        min-height: 234vh;
     }
 
 
@@ -119,48 +103,27 @@ header{
         display: none;
     }
     
-    #hem_sida{
+    #after_sida{
         width: 100vw;
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas: 
-        'he'
         'a1'
         'a2'
-        'se'
-        'a3'
         'fo'
         ;
     }
 
-    #article1_hem{
+    #article1_after{
         grid-area: a1;
         background-color: aquamarine;
         min-height: 45vh;
     }
 
-    #article2_hem{
+    #article2_after{
         grid-area: a2;
         background-color: lightcoral;
-        min-height: 90vh;
+        min-height: 234vh;
     }
-
-    #article3_hem{
-        grid-area: a3;
-        background-color: lightseagreen;
-        min-height: 90vh;
-    }
-
-    #section_hem{
-        grid-area: se;
-        background-color: lightgreen;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 144vh;
-    }
-
-
 
 }
