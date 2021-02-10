@@ -64,13 +64,22 @@ header{
     width: 100%;
     display: flex; 
     padding: 1rem;
-    height: 10%;
-}
 
+}
+#footer_desktop{
+    grid-area: fo;
+    background-color: lightpink;
+    min-height: 21vh;
+}
 /*ska bort sen slut*/
 
 /*Mobil*/
 @media screen and (max-width: 768px) {
+        /*ska bort börja*/
+        header{
+            height: 10%;
+        }
+        /*ska bort slut*/
     #resta_sida{
         width: 100vw;
         display: grid;
@@ -106,10 +115,11 @@ header{
 
 /*Desktop*/
 @media screen and (min-width: 768px) {
+    /*ska bort börja*/
     .menu-button{ 
         display: none;
     }
-    
+    /*ska bort slut*/
     #hem_sida{
         width: 100vw;
         display: grid;
