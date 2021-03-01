@@ -144,61 +144,130 @@ header a{
 
 /*ska bort sen slut*/
 
-#resta_sida{
+#boende_sida{
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: 
-    'a1'
-    'a2'
-    'a3'
+    's1'
+    's2'
     'fo'
     ;
 }
 
-#article1_resta{
-    grid-area: a1;
-    background-color: aquamarine;
-    max-height: 90vh;
+#section1_bo form input, #section1_bo form select{
+    width: 100%;
+    height: 25px;
 }
 
-#article2_resta{
-    grid-area: a2;
-    background-color: #C1AF8E;
+#section1_bo form label{
+    color: white;
+}
+
+#section1_bo form{
+    width: 100%;
+    height: 100%;
+    grid-gap: 5px;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    'na ap'
+    'da vr'
+    'so so'
+    ;
+}
+
+#Namnd{
+    grid-area: na;
+}
+
+#Antald{
+    grid-area: ap;
+}
+
+#Datumd{
+    grid-area: da;
+}
+
+#Välj_rumd{
+    grid-area: vr;
+}
+
+#sok{
+    grid-area: so;
+}
+
+#section1_bo article{
+    width: 100%;
+    margin-top: 60px; /*ändra i slutet så de passar bra med headern */
+    background-color: #31414b; 
+}
+
+#section1_bo{
+    grid-area: s1;
+    background-color: #435966;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-#article2_hem, #article2_resta h3{
-    margin-top: 10px;
+#section2_bo{
+    grid-area: s2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: #C1AF8E;
+    grid-template-areas: 
+    'sm'
+    'me'
+    'la'
+    'sv'
+    ;
 }
 
-#article3_resta{
-    grid-area: a3;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: white;
+#small{
+    grid-area: sm;
 }
 
-#article3_resta a{
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: x-large;
+#medium{
+    grid-area: me;
+}
+
+#large{
+    grid-area: la;
+}
+
+#svit{
+    grid-area: sv;
 }
 
 /*Mobil*/
 @media screen and (max-width: 768px) {
         /*ska bort börja*/
-        header a{
-            display: none;
-        }
+
+        
+    header a{
+        display: none;
+    }
         /*ska bort slut*/
-    
+
+    #section2_bo article{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #section2_bo article:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    #section2_bo img{
+        max-height: 50vh;
+    }
 }
 
 /*Desktop*/
@@ -207,7 +276,6 @@ header a{
     .menu-button{ 
         display: none;
     }
-
     header{
         justify-content: space-around;
     }
@@ -217,16 +285,28 @@ header a{
     }
     /*ska bort slut*/
 
-    #resta_sida{
-        width: 100%;
+    #small, #medium, #large, #svit{
         display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-areas: 
-        'a1 a1'
-        'a2 a3'
-        'fo fo'
-        ;
-
+        grid-template-columns: 50% 50%;
     }
-}
 
+    #section2_bo img{
+        max-height: 60vh;
+    }
+
+    #section2_bo h3{
+        margin: 0;
+    }
+
+    .rum_text{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    #section2_bo ul{
+        margin: 0 75% 0 0;
+    }
+
+}

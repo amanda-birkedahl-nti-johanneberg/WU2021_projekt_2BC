@@ -1,23 +1,53 @@
 *{
+    box-sizing: border-box;    
+}
+
+body{
     margin: 0;
-    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
 }
 
 a{
     text-decoration: none;
-    color: black;
-}
-/*ska inte vara på mobil ba dator
-a:hover{
     color: whitesmoke;
 }
-*/
+
+.tint::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.tint:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+}
+
+.tint *:not(img) {
+    z-index: 1;
+}
+
 .menu{
-    height: 30vh;
-    width: 100vw;
-    background: hotpink;
+    width: 100%;
+    background:  #29363d;
     position: fixed;
-    top: -40vh;
+    top: -80vh;
     left: 0;
     transition: top 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
@@ -26,32 +56,67 @@ a:hover{
 
 .menu-button{
     cursor: pointer;
-    display: inline;
+    display: flex;
+    align-items: center;
     margin-right: 90%;
 }
 
 .menu-button i.material-icons{
     font-size: 2.5rem;
+    padding: 10px 10px 0px 0px;
+    color: whitesmoke;
 }
 
 .show{
     top: 0;
 }
 
+#menua{
+    font-size: 25px;
+    padding: 8px 8px 30px 8px;
+}
+
 #closeB{
     margin-left: 90%;
 }
 
-#footer_mobil{
+footer{
     grid-area: fo;
-    background-color: lightpink;
-    min-height: 21vh;
+    border-top: 4px solid black;
+    background-color: #29363d;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#footer_desktop{
-    grid-area: fo;
-    background-color: lightpink;
-    min-height: 21vh;
+#info_footer{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    'ko'
+    'ad'
+    ;
+}
+
+#footer_copy{
+    font-size: small;
+}
+
+#kontakt{
+    grid-area: ko;
+}
+
+#adress{
+    grid-area: ad;
+}
+
+#kontakt, #adress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menua{
@@ -62,114 +127,166 @@ a:hover{
 
 header{
     grid-area: he;
-    background-color: lime;
+    background-color: #29363d;;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex; 
-    padding: 1rem;
+    padding: 0px 5px 5px 10px;
+    z-index: 3;
+}
+
+header a{
+    color: white;
+}
+
+#hem_sida{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'he'
+    'a1'
+    'a2'
+    'se'
+    'a3'
+    'fo'
+    ;
+}
+
+#article1_hem{
+    grid-area: a1;
+    max-height: 80vh;
+}
+
+#article2_hem{
+    grid-area: a2;
+    color: whitesmoke;
+    background-color:#435966;
+    padding: 20px;
+}
+
+#article2_hem h3, #article2_resta h3{
+    margin-top: 10px;
+}
+
+#article3_hem{
+    grid-area: a3;
+    background-color: #435966;  ;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+#section_hem{
+    grid-area: se;
+    background-color: #b3b094;
+    display: grid;
+}
+
+#section_hem article{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+#section_hem article a{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+}
+
+#ar{
+    grid-area: ar;
+    margin: 20px;
+    max-height: 50vh;
+}
+
+#ab{
+    grid-area: ab;
+    margin: 20px;
+    max-height: 50vh;
+}
+
+#as{
+    grid-area: as;
+    margin: 20px;
+    max-height: 50vh;
+}
+
+#oppettider .tider {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+    
+#oppettider h1 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+}
+
+#oppettider p{
+ margin-bottom: 7px;
+ margin-top: 7px;
 }
 
 /*Mobil*/
 @media screen and (max-width: 768px) {
-    header{
-        height: 10%;
-    }
-
-    #hem_sida{
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas: 
-        'he'
-        'a1'
-        'a2'
-        'se'
-        'a3'
-        'fo'
-        ;
-    }
-
-    #article1_hem{
-        grid-area: a1;
-        background-color: aquamarine;
-        min-height: 45vh;
-    }
-
-    #article2_hem{
-        grid-area: a2;
-        background-color: lightcoral;
-        min-height: 90vh;
+    
+    header a{
+        display: none;
     }
 
     #section_hem{
-        grid-area: se;
-        background-color: lightgreen;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 144vh;
+        grid-template-rows: repeat(3, calc(100% / 3));
+        grid-template-areas:
+         'ar'
+         'ab'
+         'as'
+        ;
     }
 
-    #article3_hem{
-        grid-area: a3;
-        background-color: lightseagreen;
-        min-height: 90vh;
+    .text_footer{
+        min-width: 250px;
     }
-
-
 }
 
 /*Desktop*/
 @media screen and (min-width: 768px) {
-    .menu-button{ 
+    .menu-button, .show{ 
         display: none;
     }
 
-    #hem_sida{
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas: 
-        'he'
-        'a1'
-        'a2'
-        'se'
-        'a3'
-        'fo'
-        ;
+    header{
+        justify-content: space-around;
+        padding: 1rem;
     }
 
-    #article1_hem{
-        grid-area: a1;
-        background-color: aquamarine;
-        min-height: 45vh;
-    }
-
-    #article2_hem{
-        grid-area: a2;
-        background-color: lightcoral;
-        min-height: 90vh;
-    }
-
-    #article3_hem{
-        grid-area: a3;
-        background-color: lightseagreen;
-        min-height: 90vh;
+    a:hover{
+        color:#90BDD6;
     }
 
     #section_hem{
-        grid-area: se;
-        background-color: lightgreen;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 144vh;
+        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-template-areas:
+         'ar ab as'
+        ;
     }
 
-
-
+    #info_footer{
+        grid-template-areas: 
+        'ko ad'
+        ;
+    }
 }

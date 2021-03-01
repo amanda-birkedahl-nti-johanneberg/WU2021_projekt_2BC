@@ -1,7 +1,16 @@
 /*ska bort sen början*/
 *{
+    box-sizing: border-box;    
+}
+
+body{
     margin: 0;
-    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 a{
@@ -15,7 +24,7 @@ a:hover{
 */
 .menu{
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     background: hotpink;
     position: fixed;
     top: -40vh;
@@ -27,7 +36,8 @@ a:hover{
 
 .menu-button{
     cursor: pointer;
-    display: inline;
+    display: flex;
+    align-items: center;
     margin-right: 90%;
 }
 
@@ -43,7 +53,7 @@ a:hover{
     margin-left: 90%;
 }
 
-#footer_mobil{
+footer{
     grid-area: fo;
     background-color: lightpink;
     min-height: 21vh;
@@ -66,12 +76,31 @@ header{
     padding: 1rem;
 
 }
-#footer_desktop{
-    grid-area: fo;
-    background-color: lightpink;
-    min-height: 21vh;
-}
+
 /*ska bort sen slut*/
+
+#after_sida{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'a1'
+    'a2'
+    'fo'
+    ;
+}
+
+#article1_after{
+    grid-area: a1;
+    background-color: aquamarine;
+    min-height: 45vh;
+}
+
+#article2_after{
+    grid-area: a2;
+    background-color: lightcoral;
+    min-height: 234vh;
+}
 
 /*Mobil*/
 @media screen and (max-width: 768px) {
@@ -79,32 +108,11 @@ header{
     header{
         height: 10%;
     }
+    
+    header a{
+        display: none;
+    }
     /*ska bort slut*/
-    #after_sida{
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas: 
-        'a1'
-        'a2'
-        'fo'
-        ;
-    }
-
-
-
-    #article1_after{
-        grid-area: a1;
-        background-color: aquamarine;
-        min-height: 45vh;
-    }
-
-    #article2_after{
-        grid-area: a2;
-        background-color: lightcoral;
-        min-height: 234vh;
-    }
-
 
 }
 
@@ -114,29 +122,13 @@ header{
     .menu-button{ 
         display: none;
     }
+    header{
+        justify-content: space-around;
+    }
+
+    a:hover{
+        color: whitesmoke;
+    }
     /*ska bort slut*/
-    
-    #after_sida{
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas: 
-        'a1'
-        'a2'
-        'fo'
-        ;
-    }
-
-    #article1_after{
-        grid-area: a1;
-        background-color: aquamarine;
-        min-height: 45vh;
-    }
-
-    #article2_after{
-        grid-area: a2;
-        background-color: lightcoral;
-        min-height: 234vh;
-    }
 
 }

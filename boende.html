@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boende</title>
+    <link rel="stylesheet" href="css/boende.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-button" id="closeB">
+            <i class="material-icons">clear</i> 
+        </div>
+        <section id="menua">
+            <a href="index.html">Hem</a>
+            <a href="boende.html">Boende</a>
+            <a href="restaurang.html">Restaurang</a>
+            <a href="spa.html">Spa</a>
+            <a href="after_ski.html">After ski</a>
+        </section>
+    </nav>
+
+    <div id="boende_sida">
+        <header>
+            <div class="menu-button" id="openB"> 
+                <i class="material-icons">menu</i>     
+            </div>
+            <a href="index.html">Hem</a>
+            <a href="boende.html">Boende</a>
+            <a href="restaurang.html">Restaurang</a>
+            <a href="spa.html">Spa</a>
+            <a href="after_ski.html">After ski</a>
+        </header>
+        <section id="section1_bo">
+            <article>
+                <form action="">
+                    <div id="Namnd">
+                        <label for="Namn">Namn:</label><br>
+                        <input type="text" id="Namn" name="Namn">
+                    </div>
+                    <div id="Antald">
+                        <label for="Antal_personer">Antal:</label><br>
+                        <input type="number" id="Antal" name="Antal" min="1" max="15">
+                    </div>
+                    <div id="Datumd">
+                        <label for="Datum">Datum:</label><br>
+                        <input type="date" id="Datum" name="Datum">
+                    </div>
+                    <div id="Välj_rumd">
+                        <label for="Välj_rum">Välj rum:</label><br>
+                        <select id="Välj_rum" name="Välj_rum" form="Välj_rum">
+                            <option value="Annat">Annat</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="Svit">Svit</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Sök" id="sok">
+                </form>
+            </article>
+        </section>
+        <section id="section2_bo">
+            <article id="small">
+                <img src="./img/small.jpg" alt="Bild på litet hotellrum">
+                <div class="rum_text"> 
+                   <h3>Small</h3>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium dolore reprehenderit ipsa eum ut, voluptatibus nesciunt minus perspiciatis soluta assumenda! Similique perferendis dolorum excepturi!
+                    <ul>
+                       <li>Info</li>
+                       <li>Info</li>
+                       <li>Info</li>
+                       <li>Info</li>
+                   </ul>
+                </div>
+            </article>
+            <article id="medium">
+                <div class="rum_text"> 
+                    <h3>Medium</h3> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium dolore reprehenderit ipsa eum ut, voluptatibus nesciunt minus perspiciatis soluta assumenda! Similique perferendis dolorum excepturi!
+                        <ul>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                       </ul>
+                 </div>
+                <img src="./img/medium.jpg" alt="Bild på mediumstort hotellrum">
+            </article>
+            <article id="large">
+                <img src="./img/large.jpg" alt="Bild på large hotellrum">
+                <div class="rum_text"> 
+                    <h3>Large</h3> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium dolore reprehenderit ipsa eum ut, voluptatibus nesciunt minus perspiciatis soluta assumenda! Similique perferendis dolorum excepturi!
+                        <ul>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                       </ul>
+                 </div>
+            </article>
+            <article id="svit">
+                <div class="rum_text"> 
+                    <h3>Svit</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim praesentium dolore reprehenderit ipsa eum ut, voluptatibus nesciunt minus perspiciatis soluta assumenda! Similique perferendis dolorum excepturi!
+                        <ul>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                           <li>Info</li>
+                       </ul>
+                 </div>
+                <img src="./img/svit.jpg" alt="Bild på en svit">   
+            </article>
+        </section>
+        <footer>
+            <section id="info_footer">
+                <article id="kontakt">            
+                    <div  class="text_footer">
+                        <h2>Kontakt</h2>
+                        <p>Telefon: 518-555-0162</p>
+                        <p>Email: cchamco122y@noisemails.com</p>
+                    </div>
+                </article>
+                <article id="adress">
+                    <div class="text_footer">
+                        <h2>Adress</h2>
+                        <p>4042  Clearview Drive</p>
+                        <p>Colorado, United States</p>
+                    </div>
+                </article>
+            </section>
+            <article id="footer_copy">
+                <p>Copyright © Amanda Birkedahl 2021</p>
+            </article>  
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
