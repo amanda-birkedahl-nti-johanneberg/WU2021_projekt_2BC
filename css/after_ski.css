@@ -6,28 +6,49 @@
 body{
     margin: 0;
 }
+
 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     vertical-align: middle;
 }
 
 a{
     text-decoration: none;
-    color: black;
-}
-/*ska inte vara på mobil ba dator
-a:hover{
     color: whitesmoke;
 }
-*/
-.menu{
-    height: 30vh;
+
+.tint::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: hotpink;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.tint:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+}
+
+.tint *:not(img) {
+    z-index: 1;
+}
+
+.menu{
+    width: 100%;
+    background:  #29363d;
     position: fixed;
-    top: -40vh;
+    top: -80vh;
     left: 0;
     transition: top 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
@@ -43,10 +64,17 @@ a:hover{
 
 .menu-button i.material-icons{
     font-size: 2.5rem;
+    padding: 10px 10px 0px 0px;
+    color: whitesmoke;
 }
 
 .show{
     top: 0;
+}
+
+#menua{
+    font-size: 25px;
+    padding: 8px 8px 30px 8px;
 }
 
 #closeB{
@@ -55,8 +83,41 @@ a:hover{
 
 footer{
     grid-area: fo;
-    background-color: lightpink;
-    min-height: 21vh;
+    border-top: 4px solid black;
+    background-color: #29363d;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#info_footer{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    'ko'
+    'ad'
+    ;
+}
+
+#footer_copy{
+    font-size: small;
+}
+
+#kontakt{
+    grid-area: ko;
+}
+
+#adress{
+    grid-area: ad;
+}
+
+#kontakt, #adress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menua{
@@ -67,39 +128,48 @@ footer{
 
 header{
     grid-area: he;
-    background-color: lime;
+    background-color: #29363d;;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex; 
-    padding: 1rem;
+    padding: 0px 5px 5px 10px;
+    z-index: 3;
+}
 
+header a{
+    color: white;
 }
 
 /*ska bort sen slut*/
 
+/*After sik sida*/
 #after_sida{
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: 
-    'a1'
-    'a2'
+    'he'
+    'a1a'
+    'a2a'
     'fo'
     ;
 }
 
 #article1_after{
-    grid-area: a1;
-    background-color: aquamarine;
-    min-height: 45vh;
+    grid-area: a1a;
+    max-height: 70vh;
 }
 
 #article2_after{
-    grid-area: a2;
-    background-color: lightcoral;
-    min-height: 234vh;
+    grid-area: a2a;
+    background-color:#C1AF8E;
+    padding: 2em;
+}
+
+#article_after h3{
+    margin-top: 10px;
 }
 
 /*Mobil*/

@@ -144,26 +144,27 @@ header a{
 
 /*ska bort sen slut*/
 
+/*Restaurang sida*/
 #resta_sida{
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: 
-    'a1'
-    'a2'
-    'a3'
+    'he'
+    'a1r'
+    'a2r'
+    'a3r'
     'fo'
     ;
 }
 
 #article1_resta{
-    grid-area: a1;
-    background-color: aquamarine;
+    grid-area: a1r;
     max-height: 90vh;
 }
 
 #article2_resta{
-    grid-area: a2;
+    grid-area: a2r;
     background-color: #C1AF8E;
     padding: 20px;
 }
@@ -173,7 +174,7 @@ header a{
 }
 
 #article3_resta{
-    grid-area: a3;
+    grid-area: a3r;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -216,14 +217,15 @@ header a{
         color: whitesmoke;
     }
     /*ska bort slut*/
-
+    /*Restaurang sida*/
     #resta_sida{
         width: 100%;
         display: grid;
         grid-template-columns: 60% 40%;
-        grid-template-areas: 
-        'a1 a1'
-        'a2 a3'
+        grid-template-areas:
+        'he he' 
+        'a1r a1r'
+        'a2r a3r'
         'fo fo'
         ;
 
